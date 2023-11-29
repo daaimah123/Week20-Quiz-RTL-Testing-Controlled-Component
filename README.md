@@ -3,7 +3,12 @@
 ### To get started
 ```
 git clone <repo>
-npm i; npm run start
+# install dependencies
+npm i
+# run and view application ui in browser
+npm run start
+# run and view test output 
+npm run test
 ```
 Before setting up your test suites, you should use `afterEach(cleanup)` (after imports) in order to unmount any React trees that were mounted with render.
 
