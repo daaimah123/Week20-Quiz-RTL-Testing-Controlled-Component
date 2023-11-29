@@ -17,6 +17,7 @@ npm run test
 ```
 
 ##### Syntax
+- `button` is a DOM node and you can assert any of its attributes such as `disabled`
 - `queryByText` will return `null` when element is not present
 - `getByText` will throw an error when element is not present
 - `rerender` can be used to test with different props
