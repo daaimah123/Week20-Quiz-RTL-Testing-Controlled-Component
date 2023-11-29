@@ -13,22 +13,23 @@ const defaultProps = {
 };
 
 test('button renders with correct text', () => {
-  // identify button renders current text
+  // Set a rendered `Button` component with all of its available properties to a deconstructed `queryByText` and`rerender`.
   const { queryByText, rerender } = render(<Button {...defaultProps} />);
+  // Ensure that the text "Submit" is present when queried.
   expect(queryByText("Submit")).toBeTruthy(); 
-  // upon rerender, change button text prop
+  // The third assertion should handle changing the button text property upon rerendering.
   rerender(<Button {...defaultProps} text="Go" />);
-  // verify change text is as expected
+  // Verify the changed text is as expected.
   expect(queryByText("Go")).toBeTruthy(); 
 });
 
 test('calls correct function on click', () => {
-  // set onClick to mock function value from default props
+  // Set a variable called `onClick` to the onClick from the default props object.
   const onClick = defaultProps.onClick;
-  // render the button component and all of its properties
+  // Set a rendered `Button` component with all of its available properties to a deconstructed `getByText`. 
   const { getByText } = render(<Button {...defaultProps} />)
-  // simulate a click event on button text as provided in the defaultProps
+  // Simulate a click event on the button's text as provided in the defaultProps.
   fireEvent.click(getByText(defaultProps.text));
-  // assert that the onClick event occurred
+  // Evaluate that the `onClick` event occured.
   expect(onClick).toHaveBeenCalled();
 });
