@@ -27,7 +27,7 @@ test('calls correct function on click', () => {
   const onClick = defaultProps.onClick;
   // render the button component and all of its properties
   const { getByText } = render(<Button {...defaultProps} />)
-  // simulate a click event on button text
+  // simulate a click event on button text as provided in the defaultProps
   fireEvent.click(getByText(defaultProps.text));
   // assert that the onClick event occurred
   expect(onClick).toHaveBeenCalled();
