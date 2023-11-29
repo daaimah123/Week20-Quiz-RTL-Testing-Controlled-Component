@@ -1,4 +1,4 @@
-# Testing a Controlled Component
+# RTL Testing a Controlled Component
 
 ### To get started
 ```
