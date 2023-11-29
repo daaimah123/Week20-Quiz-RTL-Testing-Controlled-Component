@@ -18,14 +18,6 @@ function App() {
 
             <Scenario
                 component={<Button text="Submit" onClick={() => {}} />}
-                description={
-                    <ul>
-                        <p>Use <code>queryByText</code> and <code>getByText</code> to select a node and assert its presence.</p>
-                        <p>Use <code>rerender</code> to test with different props.</p>
-                        <p>Use <code>jest.fn</code> to mock functions.</p>
-                        <p>Use <code>fireEvent.click</code> to simulate click events.</p>
-                    </ul>
-                }
                 title="Testing a Controlled Component"
             />
 
